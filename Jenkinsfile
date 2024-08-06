@@ -34,7 +34,9 @@ pipeline{
     stage('Docker Build') {
        agent any
        steps {
-        docker build('baran21/spring-petclinic:latest','--no-cache .')
+	scripts{
+        docker build('baran21/spring-petclinic:latest', '--no-cache .')
+	}
       }
     }
 
