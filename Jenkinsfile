@@ -31,14 +31,10 @@ pipeline{
                 }  
             }
         }
-    stage('Docker Build') {
-       agent any
+	stage('Docker Build') {
        steps {
-	scripts{
-        sh 'docker build --no-cache -t baran21/spring-petclinic:latest .'
-	}
+        sh 'docker build -t baran21/spring-petclinic:latest .'
       }
     }
-
 }
 }
