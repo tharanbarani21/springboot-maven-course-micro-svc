@@ -31,5 +31,12 @@ pipeline{
                 }  
             }
         }
+    stage('Docker Build') {
+       agent any
+       steps {
+        sh 'docker build -t baran21/spring-petclinic:latest .'
+      }
+    }
+
 }
 }
